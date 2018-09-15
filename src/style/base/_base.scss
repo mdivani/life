@@ -1,10 +1,22 @@
 :root {
+    //colors
     --color-black: #000;
     --color-red: red;
     --color-yellow: yellow;
+    --color-grey-light-1: #aaa;
+    --color-blue: #F0F8FF;
 
+    //size
     --cell-size: 1.5rem;
     --s-size: .8rem;
+    --m-size: 1.6rem;
+    --l-size: 3.2rem;
+    --bg-largest: 120rem;
+    //font size
+    --font-largest: 2.2rem;
+    --font-large: 1.8rem;
+    --font-medium: 1.6rem;
+    --font-small: 1.2rem;
 }
 
 *,
@@ -21,5 +33,6 @@ html {
 }
 
 body {
+    background-color: var(--color-blue);
     font-family: 'Courier New', Courier, monospace;
 }

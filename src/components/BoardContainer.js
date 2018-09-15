@@ -11,7 +11,7 @@ export default class BoardContainer extends React.Component {
 
     render() {
         return (
-            <div className='container-board'>
+            <div className='container__board'>
                 <CellsBoard />
             </div>
         );

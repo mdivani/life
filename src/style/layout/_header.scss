@@ -1,0 +1,21 @@
+.header {
+    padding: var(--l-size);
+    text-align: center;
+
+    &__heading {
+        font-size: var(--font-largest);
+        text-transform: capitalize;
+
+        &--sub {
+            display: block;
+            font-size: var(--font-large);
+            text-transform: lowercase;
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+}

@@ -1,8 +1,18 @@
 .cell-item {
-    display: inline-block;
-    background-color: black;
-    border: 1px solid var(--color-yellow);
-    width: 13px;
-    height: 13px;
-    margin: 0;
+    display: block;
+    background-color: var(--color-black);
+    cursor: pointer;
+    border: .5px solid var(--color-grey-light-1);
+    width: var(--cell-size);
+    height: var(--cell-size);
+    transition: all .3s;
+
+    &:hover,
+    &--selected {
+        background-color: var(--color-yellow);
+    }
+
+    &--alive {
+        background-color: var(--color-red);
+    }
 }
