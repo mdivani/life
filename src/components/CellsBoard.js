@@ -11,6 +11,17 @@ export default class CellsBoard extends Component {
 
     componentDidMount() {
         const size = this.props.size || 32;
+        this.resizeBoard(size);
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.size !== this.props.size) {
+            const size = this.props.size || 32;
+            this.resizeBoard(size);
+        }
+    }
+
+    resizeBoard = (size = 32) => {
         const array = [];
         for(let i = 0; i < size; i++) {
             const subArray = [];
