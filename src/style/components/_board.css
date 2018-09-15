@@ -1,0 +1,9 @@
+.board {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.board__row {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,25 @@
+:root {
+    --color-black: #000;
+    --color-red: red;
+    --color-yellow: yellow;
+
+    --cell-size: 1.5rem;
+    --s-size: .8rem;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
