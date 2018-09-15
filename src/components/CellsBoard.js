@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import CellItem from './CellItem';
-import '../style/components/_board.css';
 
 export default class CellsBoard extends Component {
     constructor(props) {

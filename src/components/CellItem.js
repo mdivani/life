@@ -1,6 +1,4 @@
 import React from 'react';
-import '../style/base/_base.css';
-import '../style/components/_cellItems.css';
 
 const CellItem = (props) => {
 

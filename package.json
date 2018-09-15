@@ -1,6 +1,7 @@
 {
   "name": "life",
   "version": "0.1.0",
+  "homepage" : "http://mdivani.github.io/life",
   "private": true,
   "dependencies": {
     "autoprefixer": "7.1.6",
