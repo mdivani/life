@@ -16,7 +16,8 @@ export default class CellItem extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         //updated if only state value has changed
-        if(prevState.cellClass !== this.state.cellClass) {
+        if(this.props.alive !== prevProps.alive ||
+           (this.props.alive && prevState.cellClass === 'cell-item--selected')) {
             //check if alive
             if(this.props.alive) {
                 //if cell is alive longer then 1 generation apply different color

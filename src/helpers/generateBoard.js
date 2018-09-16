@@ -21,20 +21,20 @@ export const gameOfLife = (board) => {
   for(let i = 0; i < tempBoard.length; i++) {
     for(let k = 0; k < tempBoard[i].length; k++) {
       if(board[i - 1] !== undefined) {
-        cellCount= cellCount + (tempBoard[i-1][k+1] || 0);
-        cellCount= cellCount + (tempBoard[i-1][k-1] || 0);
-        cellCount= cellCount + (tempBoard[i-1][k] || 0);
+        cellCount= cellCount + (tempBoard[i-1][k+1] ? 1 : 0);
+        cellCount= cellCount + (tempBoard[i-1][k-1] ? 1 : 0);
+        cellCount= cellCount + (tempBoard[i-1][k] ? 1 : 0);
       }
       if(board[i + 1] !== undefined) {
-        cellCount= cellCount + (tempBoard[i+1][k+1] || 0);
-        cellCount= cellCount + (tempBoard[i+1][k-1] || 0);
-        cellCount= cellCount + (tempBoard[i+1][k] || 0);        
+        cellCount= cellCount + (tempBoard[i+1][k+1] ? 1 : 0);
+        cellCount= cellCount + (tempBoard[i+1][k-1] ? 1 : 0);
+        cellCount= cellCount + (tempBoard[i+1][k] ? 1 : 0);        
       }
-      cellCount= cellCount + (tempBoard[i][k+1] || 0);
-      cellCount= cellCount + (tempBoard[i][k-1] || 0);
+      cellCount= cellCount + (tempBoard[i][k+1] ? 1 : 0);
+      cellCount= cellCount + (tempBoard[i][k-1] ? 1 : 0);
 
 
-      if((cellCount < 2 || cellCount > 3)&& board[i][k] === 1) {
+      if((cellCount < 2 || cellCount > 3)&& board[i][k] === true) {
         board[i][k] = false;
       }
       else if(cellCount === 3) {
@@ -75,5 +75,5 @@ const copy2dArray = (array) => {
         const copy = array[i].slice(0);
         tempBoard.push(copy);
     }
-return tempBoard;
+    return tempBoard;
 }
