@@ -1,0 +1,37 @@
+.dropdown {
+    background-color: white;
+    border: 1px solid grey;
+    font-size: var(--font-medium);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 60px;
+
+    &__selected {
+        padding: var(--m-size);
+        margin: 0;
+    }
+
+    &__items {
+        background-color: inherit;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    &__item {
+        padding: var(--m-size);
+        margin: 0;
+
+        &:hover {
+            background-color: aqua;
+            cursor: default;
+        }
+    }
+
+    &:hover .dropdown__items {
+        display: block;
+    }
+}
