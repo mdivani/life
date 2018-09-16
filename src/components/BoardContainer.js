@@ -1,6 +1,8 @@
 import React from 'react';
 import CellsBoard from './CellsBoard';
 import DropDown from './DropDown';
+import {BoardContext} from '../boardContext';
+import {getRandom2dArray} from '../helpers/generateBoard';
 
 export default class BoardContainer extends React.Component {
     constructor(props) {
@@ -21,7 +23,9 @@ export default class BoardContainer extends React.Component {
                     selected={this.state.size}
                     handleSelectSize={this.handleSelectSize}
                     />
-                <CellsBoard size={this.state.size} />
+                <BoardContext.Provider value={getRandom2dArray(this.state.size, this.state.size)}>
+                    <CellsBoard size={this.state.size} />
+                </BoardContext.Provider>
             </div>
         );
     }
