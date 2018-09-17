@@ -26,6 +26,6 @@ export default class DropDown extends React.Component {
 } 
 
 DropDown.defaultProps = {
-    options: [16,32,64],
+    options: [24,32,48],
     selected: 'resize board'
 };

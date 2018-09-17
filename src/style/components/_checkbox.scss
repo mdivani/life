@@ -1,0 +1,29 @@
+.checkbox {
+    background-color: var(--color-grey-light-2);
+    cursor: pointer;
+    width:  40px;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+
+    &__input {
+        display: none;
+    }
+
+    &__check {
+        background-color: var(--color-black);
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        transition: all .3s ease, background-color .5s ease-in;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__input[type=checkbox]:checked + .checkbox__check {
+        background-color: var(--color-yellow);
+        left: 100%;
+        transform: translateX(-100%);
+    }
+}

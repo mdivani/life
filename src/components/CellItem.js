@@ -17,7 +17,7 @@ export default class CellItem extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
         //updated if only state value has changed
-        if(this.props.alive !== prevProps.alive && !this.props.paused) {
+        if(this.props.alive !== prevProps.alive && !this.props.isSelected) {
             //check if alive
             if(this.props.alive) {
             //if cell is alive apply different color

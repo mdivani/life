@@ -13,7 +13,8 @@ export default class BoardContainer extends React.Component {
             gameBoard: [],
             interval: 50,
             intervalId: '',
-            paused: false
+            paused: false,
+            generations: 0
         }
     }
 
@@ -32,7 +33,8 @@ export default class BoardContainer extends React.Component {
     startGame = () => {
         const intervalId = setInterval(() => {
             const gameBoard = gameOfLife(this.state.gameBoard);
-            this.setState({gameBoard, paused: false});
+            const generations = this.state.generations + 1;
+            this.setState({gameBoard, paused: false, generations});
         }, this.state.interval);
         this.setState({intervalId});
     }
@@ -46,7 +48,7 @@ export default class BoardContainer extends React.Component {
 
     clearBoard = () => {
         const clearGameBoard = empty2dArray(this.state.size, this.state.size);
-        this.setState({gameBoard: clearGameBoard}, this.pauseGame);
+        this.setState({gameBoard: clearGameBoard, generations: 0}, this.pauseGame);
     }
 
     handleSelectCell = (coordX, coordY) => {
@@ -58,7 +60,9 @@ export default class BoardContainer extends React.Component {
     }
 
     handleSelectSize = (size) => {
-        if(!isNaN(size)) { this.setState({size})}
+        if(!isNaN(size)) { 
+            this.setState({size, generations: 0})
+        }
     }
 
     render() {
@@ -71,6 +75,7 @@ export default class BoardContainer extends React.Component {
                     paused: this.state.paused
                 }
             }>
+                    <p className='generations'>Generations: {this.state.generations}</p>
                     <CommandsComponent
                         startGame={this.startGame}
                         pauseGame={this.pauseGame}
