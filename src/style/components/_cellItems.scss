@@ -13,6 +13,7 @@
     }
 
     &--alive {
+        animation: age 2s ease-out;
         background-color: var(--color-red);
     }
 }

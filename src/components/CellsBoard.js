@@ -5,10 +5,16 @@ import {BoardContext} from '../boardContext';
 const CellsBoard = () => (
     <div className='board'>
         <BoardContext.Consumer>
-        { (board) => board.map((row, index) => {
+        { ({board, handleSelectCell, paused}) => board.map((row, index) => {
             return <div key={index} className='board__row'>
                     {
-                      row.map((item, itemIndex) => <CellItem key={itemIndex} alive={item}/>)
+                      row.map((item, itemIndex) => <CellItem 
+                                                        paused={paused}
+                                                        handleSelectCell={handleSelectCell}
+                                                        coordX={index}
+                                                        coordY={itemIndex}
+                                                        key={itemIndex} 
+                                                        alive={item}/>)
                     }
                    </div>
         })

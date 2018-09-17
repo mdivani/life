@@ -69,7 +69,7 @@ export const checkIfAllDead = (array) => {
   }
 
 //takes 2d array and returns clone array with no reference to original
-const copy2dArray = (array) => {
+export const copy2dArray = (array) => {
     const tempBoard = [];
     for(let i = 0; i < array.length; i++) {
         const copy = array[i].slice(0);
