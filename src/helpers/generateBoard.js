@@ -50,7 +50,7 @@ return board;
 export const checkIfAllDead = (array) => {
     for(let i = 0; i < array.length; i++) {
       for(let k = 0; k < array.length; k++) {
-        if(array[i][k] === 1) return false;
+        if(array[i][k] === true) return false;
       }
     }
     return true;
@@ -62,7 +62,7 @@ export const checkIfAllDead = (array) => {
      for(let i = 0; i < length; i++) {
        arr[i] = [];
        for(let k = 0; k < subLength; k++) {
-         arr[i][k] = 0;
+         arr[i][k] = false;
        }
      }
     return arr;
