@@ -1,10 +1,16 @@
 .checkbox {
     background-color: var(--color-grey-light-2);
+    border: 2px solid var(--color-grey-light-1);
+    box-sizing: content-box;
     cursor: pointer;
-    width:  40px;
-    height: 20px;
-    border-radius: 20px;
+    width:  3rem;
+    height: 2rem;
+    border-radius: 2rem;
     position: relative;
+    transition: all .3s ease;
+    margin: var(--s-size) var(--m-size);
+
+    @include tooltip('ON/OFF');
 
     &__input {
         display: none;
@@ -13,8 +19,8 @@
     &__check {
         background-color: var(--color-black);
         border-radius: 50%;
-        height: 20px;
-        width: 20px;
+        height: 2rem;
+        width: 2rem;
         transition: all .3s ease, background-color .5s ease-in;
         position: absolute;
         left: 0;

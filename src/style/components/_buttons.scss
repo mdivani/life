@@ -1,0 +1,24 @@
+.btn {
+    background-color: var(--color-black);
+    border: none;
+    cursor: pointer;
+    color: var(--color-blue);
+    padding: var(--s-size) var(--m-size);
+
+    &--command {
+        font-size: var(--font-largest);
+        position: relative;
+        transition: all .3s ease-in;
+
+        @include tooltip('Clear');
+        
+        &:hover {
+            color: var(--color-red);
+        }
+
+        &:focus {
+            outline: none;
+            color: var(--color-red);
+        }
+    }
+}

@@ -75,16 +75,19 @@ export default class BoardContainer extends React.Component {
                     paused: this.state.paused
                 }
             }>
-                    <p className='generations'>Generations: {this.state.generations}</p>
+                <div className='menu'>
+                    <DropDown 
+                        selected={this.state.size}
+                        handleSelectSize={this.handleSelectSize}
+                        />
+                    <p className='generations'>Generations: 
+                    <span className='generations__count'>{this.state.generations}</span></p>
                     <CommandsComponent
                         startGame={this.startGame}
                         pauseGame={this.pauseGame}
                         clearBoard={this.clearBoard}
                      />
-                    <DropDown 
-                        selected={this.state.size}
-                        handleSelectSize={this.handleSelectSize}
-                        />
+                </div>
                     <CellsBoard />
                 </BoardContext.Provider>
             </div>

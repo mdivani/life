@@ -7,7 +7,7 @@ const ToggleButton = (props) => (
         <input 
             className='checkbox__input'
             type='checkbox' 
-            checked={props.value} />
+            checked={!props.value} />
         <div 
             className='checkbox__check'></div>
     </div>

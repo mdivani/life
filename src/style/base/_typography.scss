@@ -1,0 +1,12 @@
+.generations {
+    font-size: var(--font-large);
+    font-weight: 600;
+    color: white;
+    height: 100%;
+    line-height: 1;
+
+    &__count {
+        color: var(--color-red);
+        font-size: var(--font-large);
+    }
+}

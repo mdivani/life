@@ -22,7 +22,9 @@ const CommandsComponent = (props) => {
                                 value={paused} />
             }
             </BoardContext.Consumer>
-            <CommandItem name='clear' onClickCommand={props.clearBoard} />
+            <CommandItem name='clear' onClickCommand={props.clearBoard}>
+                <i class="far fa-trash-alt"></i>
+            </CommandItem>
         </div>
     )
 }

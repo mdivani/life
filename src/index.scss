@@ -1,10 +1,16 @@
 @import './style/base/base';
 @import './style/base/animations';
+@import './style/base/typography';
+@import './style/base/mixins';
 
 @import './style/components/board';
 @import './style/components/cellItems';
 @import './style/components/dropdown';
 @import './style/components/checkbox';
+@import './style/components/buttons';
+@import './style/components/menu';
+@import './style/components/commands';
+
 
 @import './style/layout/container';
 @import './style/layout/header';

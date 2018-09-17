@@ -1,14 +1,18 @@
 .dropdown {
-    background-color: white;
+    background-color: var(--color-black);
+    color: white;
     border: 1px solid grey;
     font-size: var(--font-medium);
     text-align: center;
     position: relative;
     z-index: 1;
     width: 60px;
+    margin-left: 5px;
+
+    @include tooltip('resize');
 
     &__selected {
-        padding: var(--m-size);
+        padding: 5px 8px;
         margin: 0;
     }
 
@@ -22,11 +26,11 @@
     }
 
     &__item {
-        padding: var(--m-size);
+        padding: 5px 8px;
         margin: 0;
 
         &:hover {
-            background-color: aqua;
+            background-color: var(--color-grey-light-2);
             cursor: default;
         }
     }
